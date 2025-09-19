@@ -17,7 +17,7 @@ const About = () => {
       title: "Our Story",
       subtitle: "How it all began",
       content: "Founded in 2015, our foundation emerged from a simple belief: every person deserves hope, support, and the opportunity to thrive. What started as a small community initiative has grown into a comprehensive support network serving thousands of families.",
-      image: "https://res.cloudinary.com/dvauarkh6/image/upload/v1758231060/IMG_3764_f1ux9x.jpg",
+      image: "https://res.cloudinary.com/dvauarkh6/image/upload/v1758283441/0919_1_apdabw.png",
       stats: "Founded in 2015"
     },
     {
@@ -25,7 +25,7 @@ const About = () => {
       title: "Our Mission",
       subtitle: "What drives us forward",
       content: "We are dedicated to providing essential support, resources, and opportunities to widows, children, and families in need. Through targeted programs and community partnerships, we create lasting change that transforms lives.",
-      image: "https://res.cloudinary.com/dvauarkh6/image/upload/v1758229764/IMG_3760_tflh27.jpg",
+      image: "https://res.cloudinary.com/dvauarkh6/image/upload/v1758283321/0919_3_bkq5w0.png",
       stats: "3,700+ Lives Impacted"
     },
     {
@@ -33,7 +33,7 @@ const About = () => {
       title: "Our Vision",
       subtitle: "The future we're building",
       content: "We envision a world where no one faces life's challenges alone. A community where support is readily available, hope is restored, and every individual has the resources they need to build a brighter future.",
-      image: "https://res.cloudinary.com/dvauarkh6/image/upload/v1758251239/IMG_3765_f014b0.jpg",
+      image: "https://res.cloudinary.com/dvauarkh6/image/upload/v1758152272/luzi/WhatsApp_Image_2025-09-18_at_00.11.00_1_qde9jr.jpg",
       stats: "Building Tomorrow"
     },
     {
@@ -41,7 +41,7 @@ const About = () => {
       title: "Our Impact",
       subtitle: "Making a difference",
       content: "Through our comprehensive programs, we've supported over 500 widows, helped 1,200 children access education and care, and provided emergency aid to 2,000+ families. But our impact goes beyond numbers—it's about restored hope and transformed lives.",
-      image: "https://res.cloudinary.com/dvauarkh6/image/upload/v1758229764/IMG_3760_tflh27.jpg",
+      image: "https://res.cloudinary.com/dvauarkh6/image/upload/v1758152272/luzi/WhatsApp_Image_2025-09-18_at_00.11.00_2_j1cipc.jpg",
       stats: "500+ Widows • 1,200+ Children • 2,000+ Families"
     },
     {
@@ -49,7 +49,7 @@ const About = () => {
       title: "Our Team",
       subtitle: "The hearts behind the mission",
       content: "Our dedicated team of volunteers, social workers, and community leaders work tirelessly to ensure every person who comes to us receives the support they need. Together, we're building stronger communities.",
-      image: "https://res.cloudinary.com/dvauarkh6/image/upload/v1758251239/IMG_3765_f014b0.jpg",
+      image: "https://res.cloudinary.com/dvauarkh6/image/upload/v1758283798/0919_7_kw2l7b.png",
       stats: "50+ Team Members"
     }
   ]

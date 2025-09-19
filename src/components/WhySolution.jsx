@@ -2,10 +2,10 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import './WhySolution.css';
-const cardImage1 = 'https://res.cloudinary.com/dvauarkh6/image/upload/v1758231060/IMG_3764_f1ux9x.jpg';
-const cardImage2 = 'https://res.cloudinary.com/dvauarkh6/image/upload/v1758229764/IMG_3760_tflh27.jpg';
-const cardImage3 = 'https://res.cloudinary.com/dvauarkh6/image/upload/v1758251239/IMG_3765_f014b0.jpg';
-const cardImage4 = 'https://res.cloudinary.com/dvauarkh6/image/upload/v1758231060/IMG_3764_f1ux9x.jpg';
+const cardImage1 = 'https://res.cloudinary.com/dvauarkh6/image/upload/v1758283798/0919_7_kw2l7b.png';
+const cardImage2 = 'https://res.cloudinary.com/dvauarkh6/image/upload/v1758283674/0919_5_f19ry3.png';
+const cardImage3 = 'https://res.cloudinary.com/dvauarkh6/image/upload/v1758283600/0919_2_hhauqi.png';
+const cardImage4 = 'https://res.cloudinary.com/dvauarkh6/image/upload/v1758283565/0919_6_xtt3r5.png';
 
 const WhySolution = () => {
   const ref = useRef(null);

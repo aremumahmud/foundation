@@ -129,6 +129,7 @@
   height: 100%;
   border: none;
   object-fit: cover;
+  object-position: top;
 }
 
 .video-info {

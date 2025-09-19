@@ -97,6 +97,7 @@
   border-color: transparent;
   box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
 }
+/*  */
 
 /* Video Grid */
 .video-grid {
@@ -133,6 +134,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top;
   transition: transform 0.3s ease;
 }
 

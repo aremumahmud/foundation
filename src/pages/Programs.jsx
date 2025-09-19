@@ -39,7 +39,7 @@ const Programs = () => {
       title: "Widow Support Program",
       subtitle: "Empowering widows to rebuild their lives",
       description: "Our comprehensive widow support program provides financial assistance, counseling services, skills training, and community support to help widows navigate their new circumstances and build sustainable futures.",
-      image: "https://res.cloudinary.com/dvauarkh6/image/upload/v1758231060/IMG_3764_f1ux9x.jpg",
+      image: "https://res.cloudinary.com/dvauarkh6/image/upload/v1758283674/0919_5_f19ry3.png",
       features: [
         "Monthly financial assistance",
         "Grief counseling and emotional support",
@@ -59,7 +59,7 @@ const Programs = () => {
       title: "Children's Education Program",
       subtitle: "Ensuring every child has access to quality education",
       description: "We provide educational support, school supplies, uniforms, and scholarships to children from disadvantaged families, ensuring they have the tools they need to succeed academically.",
-      image: "https://res.cloudinary.com/dvauarkh6/image/upload/v1758229764/IMG_3760_tflh27.jpg",
+      image: "https://res.cloudinary.com/dvauarkh6/image/upload/v1758283600/0919_2_hhauqi.png",
       features: [
         "School fees and supplies",
         "Educational scholarships",
@@ -79,7 +79,7 @@ const Programs = () => {
       title: "Emergency Relief Program",
       subtitle: "Immediate assistance when families need it most",
       description: "Our emergency relief program provides rapid response support for families facing crisis situations, including food assistance, temporary shelter, medical aid, and other urgent needs.",
-      image: "https://res.cloudinary.com/dvauarkh6/image/upload/v1758251239/IMG_3765_f014b0.jpg",
+      image: "https://res.cloudinary.com/dvauarkh6/image/upload/v1758283565/0919_6_xtt3r5.png",
       features: [
         "Emergency food assistance",
         "Temporary shelter support",
@@ -99,7 +99,7 @@ const Programs = () => {
       title: "Community Development",
       subtitle: "Building stronger, more resilient communities",
       description: "We work with local communities to develop sustainable solutions, improve infrastructure, create economic opportunities, and strengthen social networks that support long-term growth.",
-      image: "https://res.cloudinary.com/dvauarkh6/image/upload/v1758229764/IMG_3760_tflh27.jpg",
+      image: "https://res.cloudinary.com/dvauarkh6/image/upload/v1758283512/0919_4_pin48p.png",
       features: [
         "Infrastructure development",
         "Economic empowerment",

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-const circleImage = 'https://res.cloudinary.com/dvauarkh6/image/upload/v1758251239/IMG_3765_f014b0.jpg';
+const circleImage = 'https://res.cloudinary.com/dvauarkh6/image/upload/v1758283504/0919_oo9pjm.png';
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -10,11 +10,33 @@ const DistinctivePanels = ({ locomotiveScrollInstance }) => {
   const containerRef = useRef(null);
   const horizontalRef = useRef(null);
   const [currentPanel, setCurrentPanel] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
   // Ensure first panel is active on mount
   useEffect(() => {
     setCurrentPanel(0);
   }, []);
+
+  // Handle responsive design
+  useEffect(() => {
+    const checkMobile = () => {
+      const wasMobile = isMobile;
+      const nowMobile = window.innerWidth <= 768;
+      setIsMobile(nowMobile);
+
+      // If mobile state changed, refresh ScrollTrigger
+      if (wasMobile !== nowMobile) {
+        setTimeout(() => {
+          ScrollTrigger.refresh();
+        }, 100);
+      }
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    return () => window.removeEventListener('resize', checkMobile);
+  }, [isMobile]);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -27,6 +49,24 @@ const DistinctivePanels = ({ locomotiveScrollInstance }) => {
 
     const timer = setTimeout(() => {
       const panels = horizontalSection.children.length;
+
+      // Kill any existing ScrollTriggers first
+      ScrollTrigger.getAll().forEach(trigger => {
+        if (trigger.trigger === container) {
+          trigger.kill();
+        }
+      });
+
+      // Disable horizontal scroll on mobile
+      if (isMobile) {
+        gsap.set(horizontalSection, {
+          width: '100%',
+          x: 0,
+          clearProps: 'transform'
+        });
+        return;
+      }
+
       const totalWidth = panels * window.innerWidth;
       const maxTranslate = totalWidth - window.innerWidth;
 
@@ -78,7 +118,7 @@ const DistinctivePanels = ({ locomotiveScrollInstance }) => {
     return () => {
       clearTimeout(timer);
     };
-  }, [locomotiveScrollInstance]);
+  }, [locomotiveScrollInstance, isMobile]);
 
   const panels = [
     {
@@ -135,15 +175,15 @@ const DistinctivePanels = ({ locomotiveScrollInstance }) => {
         ref={containerRef}
         data-scroll-section
         style={{
-          height: '600vh',
+          height: isMobile ? 'auto' : '600vh',
           position: 'relative'
         }}
       >
         <div style={{
-          position: 'sticky',
+          position: isMobile ? 'relative' : 'sticky',
           top: 0,
-          height: '100vh',
-          overflow: 'hidden',
+          height: isMobile ? 'auto' : '100vh',
+          overflow: isMobile ? 'visible' : 'hidden',
           width: '100%',
           backgroundColor: '#232520'
         }}>
@@ -151,8 +191,9 @@ const DistinctivePanels = ({ locomotiveScrollInstance }) => {
             ref={horizontalRef}
             style={{
               display: 'flex',
-              height: '100%',
-              width: '400vw',
+              flexDirection: isMobile ? 'column' : 'row',
+              height: isMobile ? 'auto' : '100%',
+              width: isMobile ? '100%' : '400vw',
               willChange: 'transform'
             }}
           >
@@ -160,34 +201,39 @@ const DistinctivePanels = ({ locomotiveScrollInstance }) => {
               <div
                 key={panel.id}
                 style={{
-                  width: '100vw',
-                  height: '100%',
+                  width: isMobile ? '100%' : '100vw',
+                  height: isMobile ? 'auto' : '100%',
+                  minHeight: isMobile ? '100vh' : 'auto',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   background: panel.bg,
                   flexShrink: 0,
-                  position: 'relative'
+                  position: 'relative',
+                  padding: isMobile ? '2rem 1rem' : '0'
                 }}
               >
                 {/* Panel 1: Minimal Center Layout with Image */}
                 {panel.type === 'minimal' && (
                   <div style={{
                     display: 'flex',
+                    flexDirection: isMobile ? 'column' : 'row',
                     alignItems: 'center',
-                    justifyContent: 'space-between',
+                    justifyContent: isMobile ? 'center' : 'space-between',
                     width: '100%',
                     height: '100%',
-                    padding: '0 6rem',
-                    boxSizing: 'border-box'
+                    padding: isMobile ? '2rem 1rem' : '0 6rem',
+                    boxSizing: 'border-box',
+                    gap: isMobile ? '3rem' : '0'
                   }}>
                     <div style={{
                       display: 'flex',
                       flexDirection: 'column',
-                      alignItems: 'flex-start',
+                      alignItems: isMobile ? 'center' : 'flex-start',
                       justifyContent: 'center',
-                      width: '50%',
-                      gap: '2rem'
+                      width: isMobile ? '100%' : '50%',
+                      gap: '2rem',
+                      textAlign: isMobile ? 'center' : 'left'
                     }}>
                       <div style={{
                         fontSize: '0.875rem',
@@ -201,7 +247,7 @@ const DistinctivePanels = ({ locomotiveScrollInstance }) => {
                         {panel.number}
                       </div>
                       <h1 style={{
-                        fontSize: '3rem',
+                        fontSize: isMobile ? '2rem' : '3rem',
                         fontWeight: '300',
                         color: '#ffffff',
                         margin: 0,
@@ -214,7 +260,7 @@ const DistinctivePanels = ({ locomotiveScrollInstance }) => {
                         {panel.title}
                       </h1>
                       <p style={{
-                        fontSize: '1.1rem',
+                        fontSize: isMobile ? '1rem' : '1.1rem',
                         fontWeight: '300',
                         color: '#d1d5db',
                         margin: 0,
@@ -254,6 +300,7 @@ const DistinctivePanels = ({ locomotiveScrollInstance }) => {
                           width: '350px',
                           height: '350px',
                           objectFit: 'cover',
+                          objectPosition: 'top',
                           borderRadius: '50%',
                           opacity: currentPanel === index ? 1 : 0.4,
                           transform: currentPanel === index ? 'scale(1)' : 'scale(0.9)',
@@ -343,19 +390,20 @@ const DistinctivePanels = ({ locomotiveScrollInstance }) => {
                       </div>
                     </div>
                     <div style={{
-                      flex: 1,
+                      flex: isMobile ? 'none' : 1,
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      padding: '0 4rem'
+                      padding: isMobile ? '0' : '0 4rem'
                     }}>
                       <img
                         src={panel.image}
                         alt={panel.title}
                         style={{
-                          width: '320px',
-                          height: '320px',
+                          width: isMobile ? '250px' : '320px',
+                          height: isMobile ? '250px' : '320px',
                           objectFit: 'cover',
+                          objectPosition: 'top',
                           borderRadius: '20px',
                           opacity: currentPanel === index ? 1 : 0.4,
                           transform: currentPanel === index ? 'translateX(0) scale(1)' : 'translateX(30px) scale(0.9)',
@@ -390,6 +438,7 @@ const DistinctivePanels = ({ locomotiveScrollInstance }) => {
                           width: '300px',
                           height: '300px',
                           objectFit: 'cover',
+                          objectPosition: 'top',
                           borderRadius: '16px',
                           opacity: currentPanel === index ? 1 : 0.4,
                           transform: currentPanel === index ? 'translateY(0) scale(1)' : 'translateY(20px) scale(0.9)',
@@ -565,6 +614,7 @@ const DistinctivePanels = ({ locomotiveScrollInstance }) => {
                           width: '380px',
                           height: '380px',
                           objectFit: 'cover',
+                          objectPosition: 'top',
                           borderRadius: '50%',
                           opacity: currentPanel === index ? 1 : 0.4,
                           transform: currentPanel === index ? 'scale(1) rotate(0deg)' : 'scale(0.8) rotate(-5deg)',
