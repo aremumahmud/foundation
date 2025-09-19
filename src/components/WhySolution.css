@@ -1,0 +1,411 @@
+/* Why Solution Section */
+.why-solution-section {
+  padding: 120px 0;
+  background: #fafafa;
+  position: relative;
+  overflow: hidden;
+}
+
+.why-solution-section::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  right: -30px;
+  bottom: -30px;
+  background: linear-gradient(135deg, rgba(35, 37, 32, 0.03) 0%, rgba(34, 197, 94, 0.03) 100%);
+  border-radius: 40px;
+  z-index: 0;
+}
+
+.why-solution-section::after {
+  content: '';
+  position: absolute;
+  bottom: 100px;
+  right: 100px;
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(135deg, rgba(35, 37, 32, 0.1) 0%, rgba(34, 197, 94, 0.1) 100%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Section Headers */
+.section-header {
+  text-align: center;
+  margin-bottom: 80px;
+      display: flex
+;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-title {
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: #232520;
+  margin: 0 0 24px 0;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.section-subtitle {
+  font-size: 1.25rem;
+  color: #666;
+  margin: 0;
+  /* max-width: 600px; */
+  margin: 0 auto;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/* Section Content */
+.section-content1 {
+  margin-bottom: 120px;
+}
+
+/* Cards Grid - Horizontal Layout */
+.cards-grid {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+
+/* Problem Cards */
+.problem-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 0;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  flex: 1;
+  min-width: 300px;
+  max-width: 350px;
+}
+
+.problem-card::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 30px;
+  height: 30px;
+  border: 3px solid #f3f4f6;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.problem-card::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: -8px;
+  width: 16px;
+  height: 16px;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(255, 165, 0, 0.2) 100%);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.problem-card:hover {
+  border-color: #d1d5db;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.problem-card:hover::before {
+  border-color: rgba(34, 197, 94, 0.4);
+  transform: scale(1.1);
+}
+
+.problem-card:hover::after {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.4) 0%, rgba(22, 163, 74, 0.4) 100%);
+  transform: scale(1.2);
+}
+
+/* Solution Cards */
+.solution-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 0;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  flex: 1;
+  min-width: 300px;
+  max-width: 350px;
+}
+
+.solution-card::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #f9fafb;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.solution-card::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, rgba(35, 37, 32, 0.1) 0%, rgba(255, 215, 0, 0.1) 100%);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.solution-card:hover {
+  border-color: #d1d5db;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.solution-card:hover::before {
+  border-color: rgba(35, 37, 32, 0.3);
+  transform: scale(1.2);
+}
+
+.solution-card:hover::after {
+  background: linear-gradient(135deg, rgba(35, 37, 32, 0.2) 0%, rgba(255, 215, 0, 0.2) 100%);
+  transform: scale(1.3);
+}
+
+/* Card Images */
+.card-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.problem-card:hover .card-image img,
+.solution-card:hover .card-image img {
+  transform: scale(1.05);
+}
+
+/* Card Content */
+.card-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9fafb;
+  border-radius: 8px;
+  color: #6b7280;
+  transition: all 0.2s ease;
+}
+
+.problem-card .card-icon,
+.solution-card .card-icon,
+.problem-card .card-title,
+.solution-card .card-title,
+.problem-card .card-description,
+.solution-card .card-description {
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.problem-card .card-icon,
+.solution-card .card-icon {
+  margin-top: 24px;
+}
+
+.problem-card .card-description,
+.solution-card .card-description {
+  margin-bottom: 24px;
+}
+
+.problem-card:hover .card-icon,
+.solution-card:hover .card-icon {
+  background: linear-gradient(135deg, #22C55E 0%, #16A34A 100%);
+  color: #ffffff;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+.card-description {
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* CTA Section */
+.cta-section1 {
+  background: linear-gradient(135deg, #232520 0%, #1a1c19 100%);
+  border-radius: 32px;
+  padding: 80px 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin: 0 24px;
+  max-width: calc(1200px - 48px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+.cta-content {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-title {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: white;
+  margin: 0 0 24px 0;
+  letter-spacing: -0.02em;
+}
+
+.cta-description {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 0 40px 0;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.cta-button {
+  background: linear-gradient(135deg, #22C55E 0%, #16A34A 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  padding: 16px 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(34, 197, 94, 0.3);
+  letter-spacing: 0.5px;
+}
+
+.cta-button:hover {
+  box-shadow: 0 12px 35px rgba(34, 197, 94, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .why-solution-section {
+    padding: 80px 0;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .cards-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .problem-card,
+  .solution-card {
+    max-width: 100%;
+    min-width: 280px;
+  }
+
+  .cta-section1 {
+    padding: 60px 24px;
+    margin: 0 16px;
+  }
+
+  .cta-title {
+    font-size: 2rem;
+  }
+
+  .cta-description {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .problem-card,
+  .solution-card {
+    min-width: 250px;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+  }
+
+  .cta-section1 {
+    padding: 40px 20px;
+    margin: 0 12px;
+  }
+}

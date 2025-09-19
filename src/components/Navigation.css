@@ -1,0 +1,115 @@
+/* Navigation */
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 12px;
+  align-items: center;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #232520;
+  font-weight: 300;
+  padding: 12px 18px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  letter-spacing: 0.2px;
+}
+
+.nav-link:hover {
+  background-color: rgba(35, 37, 32, 0.08);
+  color: #3498db;
+  transform: translateY(-1px);
+}
+
+/* Dropdown Icon */
+.dropdown-icon {
+  transition: transform 0.3s ease;
+  opacity: 0.7;
+}
+
+.dropdown:hover .dropdown-icon {
+  transform: rotate(180deg);
+  opacity: 1;
+}
+
+/* Dropdown */
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  min-width: 260px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+  border-radius: 16px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-12px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1000;
+  border: 1px solid rgba(0,0,0,0.08);
+  padding: 12px 0;
+  backdrop-filter: blur(10px);
+}
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Dropdown Items */
+.dropdown-item {
+  color: #232520;
+  padding: 16px 24px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 0;
+  position: relative;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(35, 37, 32, 0.06);
+  color: #232520;
+  padding-left: 28px;
+}
+
+.dropdown-item-icon {
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  flex-shrink: 0;
+}
+
+.dropdown-item:hover .dropdown-item-icon {
+  opacity: 1;
+}
+
+/* Add subtle divider between dropdown items */
+.dropdown-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 24px;
+  right: 24px;
+  height: 1px;
+  background-color: rgba(35, 37, 32, 0.08);
+}

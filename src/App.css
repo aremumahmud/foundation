@@ -1,0 +1,62 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.6;
+}
+
+/* App container */
+.app {
+  position: relative;
+}
+
+/* Ensure page content doesn't go under fixed header */
+.app > main {
+  padding-top: 114px; /* Account for banner (44px) + header (70px) */
+}
+
+/* Add top spacing for first components on each page */
+.hero{
+  padding-top: 114px
+}
+/* .about-page, */
+.programs-page,
+.donate-page,
+.contact-page {
+  padding-top: 174px !important; /* Account for banner (44px) + header (70px) */
+}
+
+/* Main content */
+main {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+main h1 {
+  color: #232520;
+  font-family: 'Kazimir', 'DM Sans', sans-serif;
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/* Responsive adjustments for header spacing */
+@media (max-width: 768px) {
+  .hero,
+  .about-page,
+  .programs-page,
+  .donate-page,
+  .contact-page {
+    padding-top: 100px; /* Account for smaller mobile header: banner (40px) + header (60px) */
+  }
+}

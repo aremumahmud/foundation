@@ -1,0 +1,20 @@
+/* Green Banner */
+.banner {
+  background: linear-gradient(135deg, #22C55E 0%, #16A34A 100%);
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  position: relative;
+  width: 100%;
+}
+
+.banner-content p {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 15px;
+  margin: 0;
+  letter-spacing: 0.3px;
+  position: relative;
+  z-index: 11;
+  transform: translateZ(0);
+}
