@@ -84,7 +84,7 @@ const ActionSection = () => {
         </svg>
       ),
       title: "Get Help",
-      description: "Are you in need? We're here to support you",
+      description: "Are you in need? Luzi Foundation is here to support you",
       buttonText: "Contact Us",
       buttonColor: "linear-gradient(135deg, #22C55E 0%, #16A34A 100%)",
       href: "#contact"
@@ -102,7 +102,7 @@ const ActionSection = () => {
         >
           <h2 className="action-title">Ready to Take Action?</h2>
           <p className="action-subtitle">
-            Every action, no matter how small, creates ripples of positive change. 
+            Every action, no matter how small, creates ripples of positive change with Luzi Foundation. 
             Choose how you'd like to make a difference today.
           </p>
         </motion.div>
@@ -158,10 +158,10 @@ const ActionSection = () => {
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                 </svg>
               </div>
-              <div className="emergency-text">
-                <h3>Need Immediate Assistance?</h3>
-                <p>Our support team is available 24/7 for urgent matters</p>
-              </div>
+               <div className="emergency-text">
+                 <h3>Need Immediate Assistance?</h3>
+                 <p>Luzi Foundation's support team is available 24/7 for urgent matters</p>
+               </div>
             </div>
             <div className="emergency-actions">
               <motion.a

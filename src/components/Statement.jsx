@@ -77,13 +77,13 @@ function Statement() {
           <div className="statement-content-grid">
             <div className="statement-image" data-scroll data-scroll-speed="-0.3">
               <div className="statement-img">
-                <img src={statementImage} alt="Community members smiling" />
+                <img src={statementImage} alt="Luzi Foundation community members" />
               </div>
             </div>
 
             <div className="statement-description" data-scroll data-scroll-speed="0.3">
               <p className="description-text">
-                We believe in the power of community to transform lives. Through our programs, we provide essential support, resources, and opportunities to widows, children, and families who need it most.
+                At Luzi Foundation, we believe in the power of community to transform lives. Through our comprehensive programs, we provide essential support, resources, and opportunities to widows, children, and families who need it most.
               </p>
 
               <div className="statement-cta">

@@ -14,8 +14,8 @@ function Hero() {
             Building Hope
           </h1>
           <p className="hero-description">
-            Providing essential support and resources to widows, children,
-            and families who need it most.
+            Luzi Foundation provides essential support and resources to widows, children,
+            and families who need it most. Together, we're building stronger communities.
           </p>
           <div className="hero-stats">
             <div className="stat">
@@ -37,7 +37,7 @@ function Hero() {
         </div>
 
         <div className="hero-image">
-          <img src={heroImage} alt="Community support" />
+          <img src={heroImage} alt="Luzi Foundation community support" />
         </div>
       </div>
     </section>

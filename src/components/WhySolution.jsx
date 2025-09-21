@@ -69,7 +69,7 @@ const WhySolution = () => {
       description: "Many widows struggle with loneliness, financial instability, and lack of community support after losing their partners."
     },
     {
-      image: cardImage2,
+      image: 'https://res.cloudinary.com/dvauarkh6/image/upload/v1758487024/519834009_122132871728730348_3309937617445396581_n_i188vx.jpg',
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
@@ -103,10 +103,10 @@ const WhySolution = () => {
         </svg>
       ),
       title: "Comprehensive Support",
-      description: "We provide emotional, financial, and practical support to help widows rebuild their lives with dignity and hope."
+      description: "Luzi Foundation provides emotional, financial, and practical support to help widows rebuild their lives with dignity and hope."
     },
     {
-      image: cardImage4,
+      image: 'https://res.cloudinary.com/dvauarkh6/image/upload/v1758487024/519834009_122132871728730348_3309937617445396581_n_i188vx.jpg',
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
@@ -114,7 +114,7 @@ const WhySolution = () => {
         </svg>
       ),
       title: "Educational Programs",
-      description: "Our children's programs offer mentorship, educational support, and life skills training to unlock their potential."
+      description: "Luzi Foundation's children's programs offer mentorship, educational support, and life skills training to unlock their potential."
     },
     {
       image: cardImage1,
@@ -126,7 +126,7 @@ const WhySolution = () => {
         </svg>
       ),
       title: "Community Development",
-      description: "We work with communities to create sustainable programs that address immediate needs and long-term growth."
+      description: "Luzi Foundation works with communities to create sustainable programs that address immediate needs and long-term growth."
     }
   ];
 
@@ -143,7 +143,7 @@ const WhySolution = () => {
           <motion.div className="section-header" variants={itemVariants}>
             <h2 className="section-title">Why We Exist</h2>
             <p className="section-subtitle">
-              Every person deserves hope, support, and the opportunity to thrive.
+              At Luzi Foundation, every person deserves hope, support, and the opportunity to thrive.
               We believe in the power of community to transform lives.
             </p>
           </motion.div>
@@ -186,7 +186,7 @@ const WhySolution = () => {
           <motion.div className="section-header" variants={itemVariants}>
             <h2 className="section-title">Our Solution</h2>
             <p className="section-subtitle">
-              Through targeted programs and community partnerships,
+              Through Luzi Foundation's targeted programs and community partnerships,
               we create lasting change that transforms lives and builds stronger communities.
             </p>
           </motion.div>

@@ -1,7 +1,7 @@
 import './Header.css'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import logo from '../assets/logo.png'
+import logo from '../assets/logo1.png'
 
 function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -45,7 +45,7 @@ function Header() {
         <div className="header-container">
           <Link to="/" className="logo">
             <img src={logo} alt="Foundation Logo" className="logo-image" />
-            <span className="logo-text">Foundation</span>
+            <span className="logo-text">Luzi Foundation</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -92,7 +92,7 @@ function Header() {
             <div className="mobile-nav-header">
               <Link to="/" className="mobile-nav-logo" onClick={closeMobileMenu}>
                 <img src={logo} alt="Foundation Logo" className="mobile-nav-logo-image" />
-                <span className="mobile-nav-logo-text">Foundation</span>
+                <span className="mobile-nav-logo-text">Luzi Foundation</span>
               </Link>
               <button
                 className="mobile-nav-close"
