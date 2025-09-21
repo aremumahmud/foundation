@@ -1,6 +1,6 @@
 import './Statement.css'
 import { useEffect, useRef } from 'react'
-const statementImage = 'https://res.cloudinary.com/dvauarkh6/image/upload/v1758283512/0919_4_pin48p.png'
+const statementImage = 'https://res.cloudinary.com/dvauarkh6/image/upload/v1758487024/519834009_122132871728730348_3309937617445396581_n_i188vx.jpg'
 import SplitText from './Split_text'
 
 function Statement() {
