@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { motion } from 'framer-motion'
+import VerticalAboutSection from '../components/VerticalAboutSection'
 import './About.css'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -10,6 +11,7 @@ const About = () => {
   const containerRef = useRef(null)
   const horizontalRef = useRef(null)
   const [currentSection, setCurrentSection] = useState(0)
+  const [isMobile, setIsMobile] = useState(false)
 
   const sections = [
     {
@@ -55,6 +57,19 @@ const About = () => {
   ]
 
   useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768)
+    }
+
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
+  useEffect(() => {
+    if (isMobile) return // Skip horizontal scroll setup on mobile
+
     const container = containerRef.current
     const horizontalSection = horizontalRef.current
 
@@ -130,7 +145,7 @@ const About = () => {
     return () => {
       clearTimeout(timer)
     }
-  }, [sections.length])
+  }, [sections.length, isMobile])
 
   return (
     <div className="about-page">
@@ -151,47 +166,54 @@ const About = () => {
         </div>
       </div>
 
-      {/* Horizontal Scroll Section */}
-      <div ref={containerRef} className="horizontal-container">
-        <div className="horizontal-sticky">
-          <div ref={horizontalRef} className="horizontal-content">
-            {sections.map((section, index) => (
-              <div key={section.id} className="about-section">
-                <div className="section-content">
-                  <div className="section-text">
-                    <div className="section-number">0{section.id}</div>
-                    <h2 className="section-title">{section.title}</h2>
-                    <h3 className="section-subtitle">{section.subtitle}</h3>
-                    <p className="section-description">{section.content}</p>
-                    <div className="section-stats">{section.stats}</div>
+      {/* Scroll Section - Responsive */}
+      {isMobile ? (
+        <VerticalAboutSection />
+      ) : (
+        <>
+          {/* Horizontal Scroll Section */}
+          <div ref={containerRef} className="horizontal-container">
+            <div className="horizontal-sticky">
+              <div ref={horizontalRef} className="horizontal-content">
+                {sections.map((section, index) => (
+                  <div key={section.id} className="about-section">
+                    <div className="section-content">
+                      <div className="section-text">
+                        <div className="section-number">0{section.id}</div>
+                        <h2 className="section-title">{section.title}</h2>
+                        <h3 className="section-subtitle">{section.subtitle}</h3>
+                        <p className="section-description">{section.content}</p>
+                        <div className="section-stats">{section.stats}</div>
+                      </div>
+                      <div className="section-image">
+                        <img src={section.image} alt={section.title} />
+                      </div>
+                    </div>
                   </div>
-                  <div className="section-image">
-                    <img src={section.image} alt={section.title} />
-                  </div>
-                </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
-        </div>
-      </div>
 
-      {/* Progress Indicator */}
-      <div className="progress-indicator">
-        <div className="progress-bar">
-          <div 
-            className="progress-fill"
-            style={{ width: `${((currentSection + 1) / sections.length) * 100}%` }}
-          />
-        </div>
-        <div className="progress-dots">
-          {sections.map((_, index) => (
-            <div 
-              key={index}
-              className={`progress-dot ${index === currentSection ? 'active' : ''}`}
-            />
-          ))}
-        </div>
-      </div>
+          {/* Progress Indicator */}
+          <div className="progress-indicator">
+            <div className="progress-bar">
+              <div 
+                className="progress-fill"
+                style={{ width: `${((currentSection + 1) / sections.length) * 100}%` }}
+              />
+            </div>
+            <div className="progress-dots">
+              {sections.map((_, index) => (
+                <div 
+                  key={index}
+                  className={`progress-dot ${index === currentSection ? 'active' : ''}`}
+                />
+              ))}
+            </div>
+          </div>
+        </>
+      )}
 
       {/* Call to Action */}
       <div className="about-cta">

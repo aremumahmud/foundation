@@ -189,7 +189,7 @@ const VideoCarousel = () => {
                 Follow our journey on Facebook for more inspiring stories, updates, and behind-the-scenes content.
               </p>
               <motion.a
-                href="https://facebook.com/foundationofhope" // Replace with actual Facebook URL
+                href="https://www.facebook.com/share/1MRbC7yp9L/?mibextid=wwXIfr" // Replace with actual Facebook URL
                 target="_blank"
                 rel="noopener noreferrer"
                 className="facebook-cta"

@@ -1,0 +1,148 @@
+/* Vertical Scroll Section */
+.vertical-scroll-section {
+  width: 100%;
+  position: relative;
+}
+
+.vertical-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.vertical-panel {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  position: relative;
+}
+
+.vertical-panel-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px;
+  width: 100%;
+  gap: 3rem;
+}
+
+/* Image Section */
+.vertical-image-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.vertical-panel-image {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Text Section */
+.vertical-text-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.vertical-description {
+  font-size: 1rem;
+  color: #666;
+  margin: 0 0 2rem 0;
+  text-align: center;
+  line-height: 1.6;
+  font-weight: 300;
+  max-width: 400px;
+}
+
+.vertical-scroll-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.vertical-scroll-indicator:hover {
+  opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .vertical-panel {
+    min-height: 80vh;
+    padding: 3rem 1.5rem;
+  }
+  
+  .vertical-panel-content {
+    gap: 2rem;
+  }
+  
+  .vertical-panel-image {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .vertical-text-section h1 {
+    font-size: 2.5rem !important;
+  }
+  
+  .vertical-description {
+    font-size: 0.95rem;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .vertical-panel {
+    min-height: 70vh;
+    padding: 2rem 1rem;
+  }
+  
+  .vertical-panel-content {
+    gap: 1.5rem;
+  }
+  
+  .vertical-panel-image {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .vertical-text-section h1 {
+    font-size: 2rem !important;
+  }
+  
+  .vertical-description {
+    font-size: 0.9rem;
+    max-width: 280px;
+  }
+}
+
+/* Animation Enhancements */
+.vertical-panel {
+  transition: background-color 0.3s ease;
+}
+
+.vertical-panel:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.vertical-panel:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+/* Smooth transitions between panels */
+.vertical-panel + .vertical-panel {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
