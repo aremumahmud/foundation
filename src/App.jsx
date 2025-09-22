@@ -7,6 +7,7 @@ import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
 import Banner from './components/Banner'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import ScrollToTop from './components/ScrollToTop'
 import Home from './pages/Home'
 import About from './pages/About'
 import Programs from './pages/Programs'
@@ -52,6 +53,7 @@ function App() {
   return (
     <Router>
       <div className="app">
+        <ScrollToTop />
         <Banner />
         <Header />
         <Routes>

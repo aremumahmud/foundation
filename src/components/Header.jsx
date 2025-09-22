@@ -35,7 +35,7 @@ function Header() {
         <div className="banner-container">
           <p className="banner-text">
             🌟 Help us reach our goal of supporting 1,000 more families this year!
-            <a href="#donate" className="banner-link">Donate Now</a>
+            <a href="/donate" className="banner-link">Donate Now</a>
           </p>
         </div>
       </div>
@@ -62,7 +62,7 @@ function Header() {
 
           <div className="header-cta">
             {!isMobile && (
-              <a href="#donate" className="donate-btn">Donate</a>
+              <a href="/donate" className="donate-btn">Donate</a>
             )}
 
             {/* Mobile Hamburger Menu */}

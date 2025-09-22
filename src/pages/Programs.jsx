@@ -59,7 +59,7 @@ const Programs = () => {
       title: "Children's Education Program",
       subtitle: "Ensuring every child has access to quality education",
       description: "We provide educational support, school supplies, uniforms, and scholarships to children from disadvantaged families, ensuring they have the tools they need to succeed academically.",
-      image: "https://res.cloudinary.com/dvauarkh6/image/upload/v1758283600/0919_2_hhauqi.png",
+      image: "https://res.cloudinary.com/dvauarkh6/image/upload/v1758487024/519834009_122132871728730348_3309937617445396581_n_i188vx.jpg",
       features: [
         "School fees and supplies",
         "Educational scholarships",

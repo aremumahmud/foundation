@@ -42,7 +42,7 @@ const Contact = () => {
         </svg>
       ),
       title: "Visit Us",
-      details: ["123 Hope Street", "Community City, CC 12345", "United States"]
+      details: ["54/56 Old Refinery Rd", "Elelenwo", "Port Harcourt"]
     },
     {
       icon: (
@@ -51,7 +51,7 @@ const Contact = () => {
         </svg>
       ),
       title: "Call Us",
-      details: ["+1 (234) 567-8900", "+1 (234) 567-8901", "24/7 Emergency Line"]
+      details: ["08153122319", "+1 (210) 975-7482"]
     },
     {
       icon: (
@@ -61,7 +61,7 @@ const Contact = () => {
         </svg>
       ),
       title: "Email Us",
-      details: ["info@foundationofhope.org", "support@foundationofhope.org", "emergency@foundationofhope.org"]
+      details: ["info@luzifoundation.org"]
     }
   ]
 
@@ -174,7 +174,7 @@ const Contact = () => {
               <p>If you're facing an emergency situation, don't hesitate to reach out immediately.</p>
               <div className="emergency-buttons">
                 <motion.a
-                  href="tel:+1234567890"
+                  href="tel:+12109757482"
                   className="emergency-button"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -182,7 +182,7 @@ const Contact = () => {
                   Call Emergency Line
                 </motion.a>
                 <motion.a
-                  href="mailto:emergency@foundationofhope.org"
+                  href="mailto:info@luzifoundation.org"
                   className="emergency-button secondary"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}

@@ -18,7 +18,7 @@ function Programs() {
       id: 2,
       title: "Children's Programs",
       description: "Educational support, mentorship, and recreational activities designed to empower children and provide them with opportunities for growth and development.",
-      image: "/src/assets/Image_fx.jpg",
+      image: "https://res.cloudinary.com/dvauarkh6/image/upload/v1758487024/519834009_122132871728730348_3309937617445396581_n_i188vx.jpg",
       icon: "🌟"
     },
     {

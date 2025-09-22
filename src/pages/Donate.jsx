@@ -7,7 +7,7 @@ const Donate = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-50px" })
   const [copiedField, setCopiedField] = useState('')
-  const [activeTab, setActiveTab] = useState('nigerian1')
+  const [activeTab, setActiveTab] = useState('nigerian')
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -36,8 +36,8 @@ const Donate = () => {
   }
 
   const donationAccounts = {
-    nigerian1: {
-      title: "Nigerian Account - GTBank",
+    nigerian: {
+      title: "Nigerian Account - Polaris Bank",
       country: "Nigeria",
       flag: "🇳🇬",
       icon: (
@@ -52,38 +52,13 @@ const Donate = () => {
         </svg>
       ),
       details: [
-        { label: "Bank Name", value: "Guaranty Trust Bank (GTBank)" },
-        { label: "Account Name", value: "Foundation of Hope Nigeria" },
-        { label: "Account Number", value: "0123456789" },
-        { label: "Sort Code", value: "058152036" },
-        { label: "SWIFT Code", value: "GTBINGLA" }
-      ]
-    },
-    nigerian2: {
-      title: "Nigerian Account - Access Bank",
-      country: "Nigeria",
-      flag: "🇳🇬",
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M3 21h18"/>
-          <path d="M5 21V7l8-4v18"/>
-          <path d="M19 21V11l-6-4"/>
-          <path d="M9 9v.01"/>
-          <path d="M9 12v.01"/>
-          <path d="M9 15v.01"/>
-          <path d="M9 18v.01"/>
-        </svg>
-      ),
-      details: [
-        { label: "Bank Name", value: "Access Bank Nigeria" },
-        { label: "Account Name", value: "Foundation of Hope Nigeria" },
-        { label: "Account Number", value: "0987654321" },
-        { label: "Sort Code", value: "044150149" },
-        { label: "SWIFT Code", value: "ABNGNGLA" }
+        { label: "Bank Name", value: "Polaris Bank" },
+        { label: "Account Name", value: "Luzi Women And Children Care Foundation" },
+        { label: "Account Number", value: "4092061904" }
       ]
     },
     us: {
-      title: "US Account - Bank of America",
+      title: "US Account - Coming Soon",
       country: "United States",
       flag: "🇺🇸",
       icon: (
@@ -98,19 +73,15 @@ const Donate = () => {
         </svg>
       ),
       details: [
-        { label: "Bank Name", value: "Bank of America" },
-        { label: "Account Name", value: "Foundation of Hope USA" },
-        { label: "Account Number", value: "1234567890123" },
-        { label: "Routing Number", value: "021000021" },
-        { label: "SWIFT Code", value: "BOFAUS3N" }
+        { label: "Status", value: "Coming Soon" },
+        { label: "Note", value: "US account details will be available soon" }
       ]
     }
   }
 
   const tabs = [
-    { id: 'nigerian1', label: 'GTBank Nigeria', flag: '🇳🇬' },
-    { id: 'nigerian2', label: 'Access Bank Nigeria', flag: '🇳🇬' },
-    { id: 'us', label: 'Bank of America USA', flag: '🇺🇸' }
+    { id: 'nigerian', label: 'Polaris Bank Nigeria', flag: '🇳🇬' },
+    { id: 'us', label: 'US Account (Coming Soon)', flag: '🇺🇸' }
   ]
 
   const impactLevels = [
@@ -309,7 +280,7 @@ const Donate = () => {
                   Contact Us
                 </motion.a>
                 <motion.a
-                  href="tel:+1234567890"
+                  href="tel:+12109757482"
                   className="cta-button secondary"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
