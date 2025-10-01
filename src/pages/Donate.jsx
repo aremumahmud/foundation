@@ -58,7 +58,7 @@ const Donate = () => {
       ]
     },
     us: {
-      title: "US Account - Coming Soon",
+      title: "US Account - RBFCU",
       country: "United States",
       flag: "🇺🇸",
       icon: (
@@ -73,15 +73,17 @@ const Donate = () => {
         </svg>
       ),
       details: [
-        { label: "Status", value: "Coming Soon" },
-        { label: "Note", value: "US account details will be available soon" }
+        { label: "Bank Name", value: "RBFCU" },
+        { label: "Account Type", value: "Checking" },
+        { label: "Account Number", value: "251399056" },
+        { label: "Routing Number", value: "314089681" }
       ]
     }
   }
 
   const tabs = [
     { id: 'nigerian', label: 'Polaris Bank Nigeria', flag: '🇳🇬' },
-    { id: 'us', label: 'US Account (Coming Soon)', flag: '🇺🇸' }
+    { id: 'us', label: 'US Account - RBFCU', flag: '🇺🇸' }
   ]
 
   const impactLevels = [
